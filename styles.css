@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+html {
+    font-family: 'Crimson Text', serif;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: rgb(3, 101, 119);
+}
+body {
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.panel {
+    background: rgb(182, 212, 240);
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    transition: 
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.panel1 {
+background-image: url(https://images.unsplash.com/photo-1439920120577-eb3a83c16dd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2467&q=80);
+}
+.panel2 {
+background-image: url(https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
+}
+.panel3 {
+background-image: url(https://images.unsplash.com/photo-1592530392525-9d8469678dac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80);
+}
+.panel4 {
+background-image: url(https://images.unsplash.com/photo-1573288879798-1d40b6e469e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80);
+}
+.panel5 {
+background-image: url(https://images.unsplash.com/photo-1561464379-a60fb65167c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80);    
+}
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel > *:first-child { transform: translateY(-100%);}
+.panel.open-active > *:first-child { transform: translateY(0);}
+.panel > *:last-child { transform: translateY(100%);}
+.panel.open-active > *:last-child { transform: translateY(0);}
+.panel p {
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+.panel.open {
+    font-size: 40px;
+    flex: 5;
+}
+.cta {
+    text-decoration: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Album</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- respect your strenght to love -->
+    <div class="panels">
+        <div class="panel panel1">
+            <p>I</p>
+            <p>respect</p>
+            <p>you</p>
+        </div>
+        <div class="panel panel2">
+            <p>protect</p>
+            <p>your</p>
+            <p>health</p>
+        </div>
+        <div class="panel panel3">
+            <p>passion</p>
+            <p>strength</p>
+            <p>fire</p>
+        </div>
+        <div class="panel panel4">
+            <p>dare</p>
+            <p>to</p>
+            <p>suck</p>
+        </div>
+        <div class="panel panel5">
+            <p>I</p>
+            <p>love</p>
+            <p>you</p>
+        </div>
+    </div>
+
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        function toggleOpen() {
+            this.classList.toggle('open');
+        }
+
+        function toggleActive(e) {
+            if (e.propertyName.includes('flex')) {
+                console.log('Hello')
+                this.classList.toggle('open-active');
+            }
+        }
+
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    </script>
+
+</body>
+</html>
